@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>APF Admin Dashboard</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="admin.css"></head>
+<body>
+<aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">APF</span><span>Abuja Property<br><b>Forum</b></span></a><nav><button class="nav active" data-section="overview">▦ <span>Overview</span></button><button class="nav" data-section="properties">⌂ <span>Properties</span></button><button class="nav" data-section="submissions">✉ <span>Submissions</span></button><button class="nav" data-section="settings">⚙ <span>Settings</span></button></nav><a class="site-link" href="index.html">← View website</a></aside>
+<main class="admin-main"><header><div><p class="eyebrow">ABUJA PROPERTY FORUM</p><h1 id="pageTitle">Dashboard overview</h1></div><button class="primary" id="addBtn">+ Add property</button></header>
+<section id="overview" class="panel active"><div class="cards"><div class="stat"><span>Live listings</span><strong id="statProperties">0</strong><small>Published properties</small></div><div class="stat"><span>Saved properties</span><strong id="statSaved">0</strong><small>Across visitor sessions</small></div><div class="stat"><span>Submissions</span><strong id="statSubmissions">0</strong><small>Owner enquiries</small></div><div class="stat"><span>Areas</span><strong id="statAreas">0</strong><small>Abuja locations</small></div></div><div class="panel-box"><div class="box-head"><h2>Recent listings</h2><button class="link" onclick="switchSection('properties')">Manage all →</button></div><div id="recentTable"></div></div></section>
+<section id="properties" class="panel"><div class="toolbar"><input id="adminSearch" placeholder="Search properties..."><select id="adminPurpose"><option value="">All statuses</option><option value="sale">For Sale</option><option value="rent">For Rent</option><option value="shortlet">Short Let</option></select></div><div class="panel-box"><div id="propertyTable"></div></div></section>
+<section id="submissions" class="panel"><div class="panel-box"><div class="box-head"><h2>Property submissions</h2></div><div id="submissionTable"></div></div></section>
+<section id="settings" class="panel"><div class="panel-box settings"><h2>Platform settings</h2><label>Description<textarea name="description" rows="4"></textarea></label><button class="primary">Save property</button>
+<div class="field image-upload-field">
+  <label for="propertyImage">Property Image</label>
+  <input type="file" id="propertyImage" accept="image/*">
+  <small class="help-text">Select a property photo directly from your phone or computer.</small>
+  <div id="imagePreview" class="image-preview" hidden>
+    <img id="imagePreviewImg" alt="Property image preview">
+    <button type="button" id="removeImage" class="remove-image">Remove image</button>
+  </div>
+</div>
+
+</form></div></div>
+<script src="admin.js"></script></body></html>
