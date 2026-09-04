@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abuja Property Forum — discover homes, apartments, land and commercial properties across Abuja.">
+<title>Abuja Property Forum | Find Your Place in Abuja</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><span class="brand-mark">APF</span><span>Abuja Property <b>Forum</b></span></a>
+  <nav id="mainNav">
+    <a href="#home">Home</a><a href="#properties">Properties</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+  <div class="header-actions"><button class="ghost-btn" id="favNav">♡ Saved <span id="favCount">0</span></button><a class="primary-btn" href="#list">List Your Property</a></div>
+  <button class="menu-btn" id="menuBtn">☰</button>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="eyebrow">ABUJA'S PROPERTY MARKETPLACE</p>
+    <h1>Find a place<br><em>you'll love.</em></h1>
+    <p class="hero-copy">Explore verified homes, apartments, land and commercial spaces across Abuja.</p>
+    <div class="search-panel">
+      <div class="search-tabs"><button class="active" data-purpose="all">All</button><button data-purpose="sale">For Sale</button><button data-purpose="rent">For Rent</button><button data-purpose="shortlet">Short Let</button></div>
+      <div class="search-grid">
+        <label>Location<select id="searchLocation"><option value="">Any location</option><option>Wuse</option><option>Maitama</option><option>Gwarinpa</option><option>Jabi</option><option>Asokoro</option><option>Garki</option><option>Life Camp</option><option>Katampe</option><option>Lugbe</option></select></label>
+        <label>Property type<select id="searchType"><option value="">Any type</option><option>Apartment</option><option>House</option><option>Duplex</option><option>Land</option><option>Commercial</option></select></label>
+        <label>Bedrooms<select id="searchBeds"><option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
+        <label>Budget<select id="searchPrice"><option value="">Any budget</option><option value="100000">Under ₦100k</option><option value="500000">Under ₦500k</option><option value="1000000">Under ₦1m</option><option value="5000000">Under ₦5m</option><option value="50000000">Under ₦50m</option></select></label>
+        <button class="search-btn" id="searchBtn">Search properties →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong>1,200+</strong><span>Properties listed</span></div><div><strong>36</strong><span>Areas covered</span></div><div><strong>150+</strong><span>Verified agents</span></div><div><strong>24/7</strong><span>Enquiry access</span></div>
+</section>
+
+<section class="section" id="properties">
+  <div class="section-head"><div><p class="eyebrow dark">EXPLORE ABUJA</p><h2>Featured properties</h2></div><a href="#properties" class="text-link" id="viewAll">View all →</a></div>
+  <div class="filter-row">
+    <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="sale">For Sale</button><button class="filter" data-filter="rent">For Rent</button><button class="filter" data-filter="shortlet">Short Let</button>
+  </div>
+  <div class="property-grid" id="propertyGrid"></div>
+  <div class="empty-state" id="emptyState" hidden>No properties match your search.</div>
+</section>
+
+<section class="split-section">
+  <div class="split-image"></div>
+  <div class="split-copy"><p class="eyebrow dark">WHY ABUJA PROPERTY FORUM</p><h2>Property search, made simpler.</h2><p>We bring property seekers, owners and trusted agents together in one easy-to-use platform built around the Abuja market.</p><div class="check-list"><span>✓ Curated property listings</span><span>✓ Direct agent contact</span><span>✓ WhatsApp enquiries</span><span>✓ Save properties for later</span></div><a class="primary-btn" href="#about">Learn more</a></div>
+</section>
+
+<section class="section locations"><div class="section-head"><div><p class="eyebrow dark">POPULAR AREAS</p><h2>Explore by location</h2></div></div><div class="location-grid">
+  <button class="location-card" data-location="Maitama"><span>Maitama</span><small>Premium residences</small></button>
+  <button class="location-card" data-location="Wuse"><span>Wuse</span><small>City living</small></button>
+  <button class="location-card" data-location="Gwarinpa"><span>Gwarinpa</span><small>Family homes</small></button>
+  <button class="location-card" data-location="Jabi"><span>Jabi</span><small>Modern apartments</small></button>
+</div></section>
+
+<section class="cta" id="list"><div><p class="eyebrow">OWN A PROPERTY?</p><h2>Put your property in front of serious buyers.</h2><p>Submit your property details and our team can follow up with you.</p></div><button class="light-btn" id="openList">List Your Property →</button></section>
+
+<section class="section about" id="about"><div><p class="eyebrow dark">ABOUT US</p><h2>Built for Abuja's property community.</h2></div><div><p>Abuja Property Forum is a property discovery platform designed to make it easier to find, compare and enquire about properties across the Federal Capital Territory.</p><p>Whether you're buying, renting, looking for a short let or listing a property, the platform connects you with the information and people you need.</p></div></section>
+
+<section class="contact section" id="contact"><div><p class="eyebrow dark">GET IN TOUCH</p><h2>Let's talk property.</h2><p>Have a question about a listing or want to put a property on the platform?</p></div><form id="contactForm"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><input placeholder="Phone / WhatsApp"><textarea required rows="5" placeholder="How can we help?"></textarea><button class="primary-btn" type="submit">Send enquiry</button></form></section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">APF</span><span>Abuja Property <b>Forum</b></span></div><p>© 2026 Abuja Property Forum. All rights reserved.</p><a href="admin.html">Admin</a></footer>
+
+<div class="modal" id="propertyModal"><div class="modal-card property-modal"><button class="close" data-close>×</button><div id="propertyDetail"></div></div></div>
+<div class="modal" id="listModal"><div class="modal-card"><button class="close" data-close>×</button><p class="eyebrow dark">LIST YOUR PROPERTY</p><h2>Tell us about your property</h2><form id="listForm" class="modal-form"><input name="name" required placeholder="Your name"><input name="phone" required placeholder="Phone / WhatsApp"><input name="title" required placeholder="Property title"><select name="type" required><option value="">Property type</option><option>Apartment</option><option>House</option><option>Duplex</option><option>Land</option><option>Commercial</option></select><input name="location" required placeholder="Location in Abuja"><input name="price" required placeholder="Price (e.g. ₦850,000/year)"><textarea name="details" rows="4" placeholder="Property details"></textarea><button class="primary-btn">Submit property</button></form></div></div>
+<script src="app.js"></script>
+</body>
+</html>
